@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>index</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Poisse Philippe" />
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		
+		<link rel="stylesheet" href="./styles/styles.css" />
+		
+		<script type="text/javascript" src="./js/chrono.js">
+
+		</script> 
+
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<h1>Chronomètre</h1>
+			</header>
+			<nav>
+				<p>
+					<a href="./index.html">Remettre tous les compteurs à zéro.</a>
+				</p>
+			</nav>
+
+			<div>
+
+				<form accept-charset="utf-8" action="./home.htm" method="post">
+					
+					<div class="bloc">
+						
+						<div class="compteur" id="participant_1">
+							<label for="nom_1">Nom</label>
+							<input name="nom_1" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_1();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_1);"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_1', 'temps_1')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_1" id="temps_1" class="temps"/>
+						</div>
+	
+						<div class="compteur" id="participant_2">
+							<label for="nom_2">Nom</label>
+							<input name="nom_2" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_2();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_2)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_2', 'temps_2')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_2" id="temps_2" class="temps"/>
+						</div>
+						
+						<div class="compteur" id="participant_3">
+							<label for="nom_3">Nom</label>
+							<input name="nom_3" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_3();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_3)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_3', 'temps_3')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_3" id="temps_3" class="temps"/>
+						</div>
+						
+						<div class="compteur" id="participant_4">
+							<label for="nom_4">Nom</label>
+							<input name="nom_4" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_4();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_4)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_4', 'temps_4')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_4" id="temps_4" class="temps"/>
+						</div>
+	
+						<div class="compteur" id="participant_5">
+							<label for="nom_5">Nom</label>
+							<input name="nom_5" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_5();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_5)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_5', 'temps_5')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_5" id="temps_5" class="temps"/>
+						</div>
+						
+						<div class="compteur" id="participant_6">
+							<label for="nom_6">Nom</label>
+							<input name="nom_6" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_6();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_6)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_6', 'temps_6')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_6" id="temps_6" class="temps"/>
+						</div>
+						
+						<div class="compteur" id="participant_7">
+							<label for="nom_7">Nom</label>
+							<input name="nom_7" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_7();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_7)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_7', 'temps_7')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_7" id="temps_7" class="temps"/>
+						</div>
+						
+						<div class="compteur" id="participant_8">
+							<label for="nom_8">Nom</label>
+							<input name="nom_8" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_8();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_8)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_8', 'temps_8')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_8" id="temps_8" class="temps"/>
+						</div>
+	
+						<div class="compteur" id="participant_9">
+							<label for="nom_9">Nom</label>
+							<input name="nom_9" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_9();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_9)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_9', 'temps_9')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_9" id="temps_9" class="temps"/>
+						</div>
+						
+						<div class="compteur" id="participant_10">
+							<label for="nom_10">Nom</label>
+							<input name="nom_10" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_10();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_10)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_10', 'temps_10')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_10" id="temps_10" class="temps"/>
+						</div>
+						
+					</div>
+					
+					<div class="bloc">
+						
+						<div class="compteur" id="participant_11">
+							<label for="nom_1">Nom</label>
+							<input name="nom_1" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_11();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_11)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_11', 'temps_11')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_11" id="temps_11" class="temps"/>
+						</div>
+	
+						<div class="compteur" id="participant_12">
+							<label for="nom_12">Nom</label>
+							<input name="nom_12" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_12();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_12)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_12', 'temps_12')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_12" id="temps_12" class="temps"/>
+						</div>
+						
+						<div class="compteur" id="participant_13">
+							<label for="nom_13">Nom</label>
+							<input name="nom_13" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_13();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_13)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_13', 'temps_13')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_13" id="temps_13" class="temps"/>
+						</div>
+						
+						<div class="compteur" id="participant_14">
+							<label for="nom_14">Nom</label>
+							<input name="nom_14" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_14();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_14)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_14', 'temps_14')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_14" id="temps_14" class="temps"/>
+						</div>
+	
+						<div class="compteur" id="participant_15">
+							<label for="nom_15">Nom</label>
+							<input name="nom_15" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_15();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_15)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_15', 'temps_15')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_15" id="temps_15" class="temps"/>
+						</div>
+						
+						<div class="compteur" id="participant_16">
+							<label for="nom_16">Nom</label>
+							<input name="nom_16" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_16();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_16)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_16', 'temps_16')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_16" id="temps_16" class="temps"/>
+						</div>
+						
+						<div class="compteur" id="participant_17">
+							<label for="nom_17">Nom</label>
+							<input name="nom_17" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_17();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_17)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_17', 'temps_17')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_17" id="temps_17" class="temps"/>
+						</div>
+						
+						<div class="compteur" id="participant_18">
+							<label for="nom_18">Nom</label>
+							<input name="nom_18" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_18();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_18)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_18', 'temps_18')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_18" id="temps_18" class="temps"/>
+						</div>
+	
+						<div class="compteur" id="participant_19">
+							<label for="nom_19">Nom</label>
+							<input name="nom_19" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_19();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_19)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_19', 'temps_19')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_19" id="temps_19" class="temps"/>
+						</div>
+						
+						<div class="compteur" id="participant_20">
+							<label for="nom_20">Nom</label>
+							<input name="nom_20" class="nom" type="text" placeholder="Nom du participant" />
+							<a href="#" onclick="chrono_20();"><img src="./images/lecture.png" width="30px" height="30px"class="debut"alt="démarrer" title="démarrer" /></a>
+							<a href="#" onclick="clearTimeout(compte_20)"><img src="./images/pause.png" width="30px" height="30px"class="pause" alt="pause" title="pause"/></a>
+							<a href="#" onclick="zero('compte_20', 'temps_20')"><img src="./images/cercle.png" width="30px" height="30px"class="raz" alt="remettre à zéro" title="remettre à zéro"/></a>
+							<input name="temps_20" id="temps_20" class="temps"/>
+						</div>
+						
+					</div>
+					
+					
+				</form>
+
+
+			</div>
+
+			<footer>
+				<p>
+					&copy; Copyright  by Poisse Philippe
+				</p>
+				<img src="./images/GPLv3_Logo.svg" width="72" height="36" alt="Logotype de la GNU-GPL V3" title="Cet outil est en GNU-GPL V3"/>
+			</footer>
+		</div>
+	</body>
+</html>
